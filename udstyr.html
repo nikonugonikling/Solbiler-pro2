@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solbiler ApS | Vælg ekstra udstyr</title>
+  <meta name="description" content="Solbiler har de bedste biler under solen" />
+  <meta name="author" content="Dan Okkels Brendstrup (adjunkt - dob@eaaa.dk)" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header>
+    <h1><a href="index.html">Solbiler ApS</a></h1>
+    <nav>
+      <a href="#" class="login">Log ind</a>
+    </nav>
+    <nav>
+      <a href="omos.html" class="omnav">Om Solbiler</a>
+    </nav>
+  </header>
+
+  <main class="udstyr">
+    <img class="mark" src="img/mark.jpg">
+    <div id="rental-details">
+      <h3>Du har valgt</h3>
+      <dl>
+        <dt>Biltype:</dt>
+        <dd id="rental-car"></dd>
+        <dt>Afhentes:</dt>
+        <dd id="rental-from"></dd>
+        <dt>Afleveres:</dt>
+        <dd id=rental-to></dd>
+        <dt>Antal dage:</dt>
+        <dd id="rental-days"></dd>
+        <dt>Lejepris:</dt>
+        <dd id="rental-price"></dd>
+      </dl>
+    </div>
+
+    <form action="kunde.html">
+      
+      <div class="extras">
+        <div class="extra1">
+          <h3 class="overskrift">Vælg ekstraudstyr</h3>
+          <label>
+            <input type="checkbox" name="extra" value="199" />
+            Ekstra chauffør: 199,-
+          </label>
+          <label>
+            <input type="checkbox" name="extra" value="139" />
+            Barnesæde (1-4 år): 139,-
+          </label>
+          <label>
+            <input type="checkbox" name="extra" value="149" />
+            Barnesæde (5-12 år): 149,-
+          </label>
+        </div>
+        <div class="extra2">
+          <label>
+            <input type="checkbox" name="extra" value="119" />
+            Vejhjælp+: 119,-
+          </label>
+          <label>
+            <input type="checkbox" name="extra" value="249" />
+            GPS navigation: 249,-
+          </label>
+          <label>
+            <input type="checkbox" name="extra" value="189" />
+            Snekæder: 189,-
+          </label>
+          <p>
+            Pris i alt inkl. ekstraudstyr:
+            <br />
+            <b id="price-incl-extras"></b>
+            inkl. moms
+          </p>
+          <button type="submit" class="flowknap">Videre</button>
+        </div>
+      </div>
+    </form>
+  </main>
+  <script src="js/udstyr.js"></script>
+</body>
+
+</html>

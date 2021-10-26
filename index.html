@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solbiler ApS | Lej din bil her</title>
+  <meta name="description" content="Solbiler har de bedste biler under solen" />
+  <meta name="author" content="Dan Okkels Brendstrup (adjunkt - dob@eaaa.dk)" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header>
+    <h1><a href="index.html">Solbiler ApS</a></h1>
+    <nav>
+      <a href="#" class="login">Log ind</a>
+    </nav>
+    <nav>
+      <a href="omos.html" class="omnav">Om Solbiler</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="search-box">
+        <h2>Find bilen som passer til dig</h2>
+        <form method="post" id="search-form">
+          <div class="row">
+            <div>
+              <label for="date-from">Jeg henter den</label>
+              <input type="date" name="date-from" id="date-from" placeholder="åååå-mm-dd" />
+            </div>
+            <div>
+              <label for="date-to">Jeg afleverer den</label>
+              <input type="date" name="date-to" id="date-to" placeholder="åååå-mm-dd" />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="person-count">Antal personer</label>
+              <input type="number" value="1" min="1" max="7" name="person-count" id="person-count" />
+            </div>
+            <div>
+              <label for="luggage-count">Antal kufferter</label>
+              <select name="luggage-count" id="luggage-count">
+                <option value="0">0 - kun taske</option>
+                <option value="1">1 kuffert</option>
+                <option value="2">2 kufferter</option>
+                <option value="3">3 kufferter</option>
+                <option value="4">4 kufferter</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" id="search-button">Søg</button>
+        </form>
+      </div>
+    </div>
+
+    <iframe class="playlist" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0YBu6Mak936" frameborder="0"
+      allowtransparency="true" allow="encrypted-media">
+    </iframe>
+
+    <iframe class="kort"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2228.188122534304!2d10.098535015840756!3d56.05004498063386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c69f2e86f943d%3A0x16a6eca4185955f0!2sSolbjerg%20Hedevej%2C%208355%20Solbjerg!5e0!3m2!1sda!2sdk!4v1634405276299!5m2!1sda!2sdk"
+      style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+    <template id="car-template">
+      <article class="car">
+        <img height="130" />
+        <h1></h1>
+        <dl>
+          <dt>Kategori</dt>
+          <dd class="category"></dd>
+          <dt>Personer</dt>
+          <dd class="person-count"></dd>
+          <dt>Kufferter</dt>
+          <dd class="luggage-count"></dd>
+        </dl>
+        <div>
+          <p class="price"></p>
+          <a>Book nu</a>
+        </div>
+      </article>
+    </template>
+
+    <section id="cars-list"></section>
+
+  </main>
+  <footer>© 2021 Solbiler ApS</footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

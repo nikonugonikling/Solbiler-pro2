@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solbiler ApS | Kundeoplysninger</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header>
+    <h1><a href="index.html">Solbiler ApS</a></h1>
+    <nav>
+      <a href="#" class="login">Log ind</a>
+    </nav>
+    <nav>
+      <a href="omos.html" class="omnav">Om Solbiler</a>
+    </nav>
+  </header>
+
+  <main class="udstyr">
+    <img class="mark" src="img/mark.jpg">
+    <div id="rental-details">
+      <h3>Din booking</h3>
+      <dl>
+        <dt>Pris i alt:</dt>
+        <dd id="rental-price"></dd>
+        <dt>Biltype:</dt>
+        <dd id="rental-car"></dd>
+        <dt>Afhentes:</dt>
+        <dd id="rental-from"></dd>
+        <dt>Afleveres:</dt>
+        <dd id="rental-to"></dd>
+        <dt>Antal dage:</dt>
+        <dd id="rental-days"></dd>
+        <dt>Ekstraudstyr:</dt>
+        <dd id="extras-list"></dd>
+        <dt>Ekstraudstyr i alt:</dt>
+        <dd id="extras-price"></dd>
+      </dl>
+    </div>
+
+
+    <form action="kvittering.html">
+      <div class="input">
+        <div class="input1">
+          <h3 class="overskrift">Dine oplysninger</h3>
+          <label for="name">Dit fulde navn</label><br>
+          <input type="text" id="name" name="name"><br>
+          <label for="adress">Adresse</label><br>
+          <input type="text" id="adress" name="adress"><br>
+          <label for="zip">Postnummer</label><br>
+          <input type="text" id="zip" name="zip"><br>
+        </div>
+        <div class="input2">
+          <label for="city">By</label><br>
+          <input type="text" id="city" name="city"><br>
+          <label for="email">E-mail</label><br>
+          <input type="email" id="email" name="email"><br>
+          <label for="phone">Mobilnummer</label><br>
+          <input type="text" id="phone" name="phone"><br>
+          <button type="submit" class="flowknap">Book nu</button>
+        </div>
+      </div>
+    </form>
+
+  </main>
+  <script src="js/kunde.js"></script>
+</body>
+
+</html>
