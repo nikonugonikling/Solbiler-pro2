@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@400;600;700&display=swap");
+
+:root {
+  --base-space: 5px;
+  --container-width: 1024px;
+  --wide-width: 1280px;
+  --color-white: hsl(0, 0%, 100%);
+  --color-green: #93C572;
+  --color-beige: #FDF4DC;
+  --color-brown: hsl(29, 40%, 29%);
+}
+
+body {
+  background-color: var(--color-white);
+  margin: 0;
+  color: var(--color-green);
+}
+
+body,
+button {
+  font-family:'Segoe UI';
+}
+
+body:before {
+  content: "";
+  display: block;
+  border-bottom: 30px solid var(--color-beige);
+}
+
+/* Header ------------------------------------------------------------------- */
+header {
+  padding-top: calc(6 * var(--base-space));
+  padding-bottom: 20px;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid silver;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: var(--color-green);
+  margin: 0;
+  font-size: 40px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.login {
+  display: flex;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--color-brown);
+}
+
+.omnav {
+  display: flex;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-brown);
+}
+
+.login:hover {
+  color: var(--color-brown);
+}
+
+.login:before {
+  margin-right: 3px;
+  content: "🔐";
+}
+
+/* Hero --------------------------------------------------------------------- */
+
+.hero {
+  display: flex;
+  align-items: center;
+  background-image: url("/img/bil.jpg");
+  background-position: center center;
+  max-width: var(--wide-width);
+  margin: 0 auto;
+  margin-bottom: 20px;
+  height: 500px;
+  background-size: cover;
+}
+
+
+.search-box {
+  background-color: hsla(33, 30%, 98%, 90%);
+  float: left;
+  padding: calc(3 * var(--base-space));
+  transition: transform 0.2s ease-in-out;
+  box-shadow: var(--color-brown) 1px 1px 5px;
+  min-width: 350px;
+}
+
+@media screen and (min-width: 600px) {
+  .search-box {
+    transform: translateX(calc(4 * var(--base-space)));
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .search-box {
+    transform: translateX(
+      calc((var(--wide-width) - var(--container-width)) / 2)
+    );
+  }
+}
+
+.search-box h2 {
+  color: var(--color-brown);
+}
+
+.search-box label {
+  display: block;
+  color: var(--color-brown);
+}
+
+.search-box .row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: calc(3 * var(--base-space));
+}
+
+.search-box .row > * {
+  flex-basis: 47%;
+}
+
+.search-box input,
+.search-box select {
+  padding: var(--base-space);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-brown);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-box input[type="number"] {
+  text-align: right;
+}
+
+.search-box button[type="submit"] {
+  padding: var(--base-space) calc(4 * var(--base-space));
+  background-color: var(--color-green);
+  border: 2px solid var(--color-green);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 16px;
+  float: right;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.search-box button[type="submit"]:hover {
+  cursor: pointer;
+}
+
+/* Spotify playliste og google kort --------------------------------------------------- */
+
+.playlist {
+  width: 400px;
+  height: 280px;
+  margin-left: 330px;
+}
+
+.kort {
+  width: 400px;
+  height: 280px;
+  margin-left: 50px;
+}
+
+
+/* List of cars ------------------------------------------------------------- */
+
+.car {
+  margin: calc(4 * var(--base-space)) auto;
+  padding: calc(2 * var(--base-space));
+  background-color: var(--color-beige);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: var(--container-width);
+}
+
+.car h1 {
+  margin: 0 calc(2 * var(--base-space));
+  flex-basis: 30%;
+  color: var(--color-brown);
+}
+
+.car img {
+  display: block;
+  border: 1px solid var(--color-brown);
+}
+
+.car dl {
+  margin: 0;
+  flex-grow: 1;
+  color: var(--color-brown);
+  line-height: 40px;
+}
+
+.car dt {
+  font-weight: 600;
+  float: left;
+}
+
+.car dt:after {
+  content: ":";
+  margin-right: 3px;
+}
+
+.car dd {
+  margin: 0;
+}
+
+.car .price {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--color-brown);
+  line-height: 60px;
+}
+
+.car a {
+  border: 1px solid var(--color-green);
+  background-color: var(--color-green);
+  padding: var(--base-space) calc(2 * var(--base-space));
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 16px;
+  width: 100%;
+  line-height: 1.5;
+  transition: background-color 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.car button:hover {
+  cursor: pointer;
+}
+
+
+/* Udstyr og kunde overordnet -------------------------------------------------- */
+
+.mark {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.udstyr {
+  float: left;
+  display: inline;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+/* Udstyrs- og kundeside overførte oplysninger ----------------------------------------------- */
+
+#rental-details {
+  background-color: var(--color-beige);
+  color: var(--color-brown);
+  width: 20%;
+  height: 300px;
+  float: left;
+  display: inline;
+  margin-left: 10%;
+  padding: 50px;
+  line-height: 30px;
+  border: 1px solid var(--color-brown);
+}
+
+#rental-details dt {
+  font-weight: 600;
+  align-items: baseline;
+  justify-content: space-between;
+  float: left;
+}
+
+#rental-details dd {
+  float: right;
+  width: 50%;
+  white-space: nowrap;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.extras, .input {
+  background-color: var(--color-beige);
+  color: var(--color-brown);
+  width: 40%;
+  height: 300px;
+  float: right;
+  margin-right: 10%;
+  padding: 50px;
+  line-height: 30px;
+  border: 1px solid var(--color-brown);
+  
+}
+
+.input1, .input2 {
+  float: left;
+  width: 50%;
+}
+
+.input2 {
+  padding-top: 50px;
+} 
+
+.overskrift {
+  margin-top: 1px;
+  margin-left: 1px;
+  width: 300px;
+}
+
+
+/* Udstyr og kunde knapper----------------------------------------------------*/
+
+.flowknap {
+  border: 1px solid var(--color-green);
+  background-color: var(--color-green);
+  padding: var(--base-space) calc(2 * var(--base-space));
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 16px;
+  width: 90px;
+  line-height: 1.5;
+  text-decoration: none;
+  float: right;
+  margin-top: 60px;
+}
+
+.flowknap:hover {
+  cursor: pointer;
+}
+
+/* Kvitteringsside --------------------------------------------------- */
+
+.kvittering1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  margin-top: 100px;
+}
+
+#kvittering {
+  color: var(--color-brown);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-brown);
+  width: 300px;
+  display: block;
+  margin: auto;
+  padding: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: 10px 10px 5px rgb(72, 100, 72);
+}
+
+.background {
+  background-color: var(--color-green);
+  padding-bottom: 100px;
+  padding-top: 80px;
+}
+
+/* Om os ------------------------------------------------------------*/
+
+.count1 {
+  font-size: 80px;
+  font-weight: lighter;
+  color: var(--color-brown);
+  text-align: center;
+}
+
+.hvem {
+  display: flex;
+}
+
+.hvem1, .hvem2 {
+  flex: 40%;
+  color: var(--color-brown);
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.hvemervi {
+  color: var(--color-brown);
+  margin-left: 120px;
+}
+
+/* Footer ------------------------------------------------------------------- */
+
+footer {
+  padding: var(--base-space);
+  text-align: center;
+  font-size: 14px;
+  color: silver;
+}
